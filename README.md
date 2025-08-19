@@ -15,7 +15,7 @@ In task 2, the T5-base model achieved the best METEOR score with 36.23% for shor
 
 For specific model developed for each task, please refer to table below:
 - Task 1
-  1. [Baseline Feedforward Neural Network Classifier](#data-set)
+  1. [Baseline Feedforward Neural Network Classifier](###neural-network-model-tested-for-performance-comparison)
 
 ## Data Set
 The dataset used in this research is adopted from Kaggle Clickbait Challenge 2023, which consists of 3,200 posts in training and 400 posts in validation set.    
