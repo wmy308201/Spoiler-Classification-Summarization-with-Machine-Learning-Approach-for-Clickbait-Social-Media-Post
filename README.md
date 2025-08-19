@@ -15,7 +15,7 @@ In task 2, the T5-base model achieved the best METEOR score with 36.23% for shor
 
 For specific model developed for each task, please refer to table below:
 - Task 1
-  1. [Baseline Feedforward Neural Network Classifier](###1.-fully-connected-neural-network-classifier)
+  1. [Baseline Feedforward Neural Network Classifier](####fully-connected-neural-network-classifier)
 
 ## Data Set
 The dataset used in this research is adopted from Kaggle Clickbait Challenge 2023, which consists of 3,200 posts in training and 400 posts in validation set.    
@@ -39,7 +39,7 @@ Task 1 refers to the classification task which aims to identify the types of spo
 Therefore, this task is to classify the selected text content into 3 target class labels. 
 
 ### Neural Network Model tested for Performance Comparison
-### 1. Fully Connected Neural Network Classifier
+#### Fully Connected Neural Network Classifier
 This model is the baseline approach for the task. The simple structure is designed to serve as foundation and to better illustrate performance difference for other models designed in this research for this task. The architecture is as follows:
 - Input embedding layer (random embedding / word2vec embedding)
 - Single hidden layer of 128 neurons with ReLU activation
