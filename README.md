@@ -40,7 +40,7 @@ Therefore, this task is to classify the selected text content into 3 target clas
 
 ### Neural Network Model tested for Performance Comparison
 <a name="nn-task1"></a>
-#### Fully Connected Neural Network Classifier
+#### 1. Fully Connected Neural Network Classifier 'NN_task1.py'
 This model is the baseline approach for the task. The simple structure is designed to serve as foundation and to better illustrate performance difference for other models designed in this research for this task. The architecture is as follows:
 - Input embedding layer (random embedding / word2vec embedding)
 - Single hidden layer of 128 neurons with ReLU activation
@@ -48,13 +48,20 @@ This model is the baseline approach for the task. The simple structure is design
 - Fully-connected output layer of SoftMax activation for classification
 
 Cross entropy loss is selected as the loss function and L2 regularization is applied to address overfitting. 
-
-### 2. Convolutional Neutral Network
+<a name="cnn-mp-task1"></a>
+#### 2. Convolutional Neutral Network with Max-pooling ()
 Convolutional Neural Network (CNN) is built to leverage on its ability to capture local relationships between words. Differing from previous simple NN classifier, it can capture the key phrases or words combination that might be vital for sentiment analysis. 
 
 In addition, as the task aims to identify the type of spoilers instead of basic binary sentiment analysis (i.e. positive/negative tone), CNN is selected to examine if patterns in neighboring words can facilitate the classification. (e.g. numbers following noun patterns, like “7 habits”, “3 places” which can indicate a “multi” type of spoiler should be classified). 
+   
+This is inspired by the CNN architecture constructed in [Kim's Research on CNN in 2014](https://arxiv.org/abs/1408.5882), which leveraged on applying parallel kernel size parallelly to capture more informative patterns.
 
-Two types of CNN architecture are constructed. The 1st structure is inspired by the CNN architecture constructed in [Kim's Research on CNN in 2014](https://arxiv.org/abs/1408.5882), which leveraged on applying parallel kernel size parallelly to capture more informative patterns.
+Parallel Convolutional Layers with Max-pooling 
+- Input embedding layer (random embedding / word2vec embedding)
+- Parallel convolutional layers with varying filter sizes
+- Max-pooling layer
+- 2nd Drop out layer
+- Fully-connected output layer for classification
 
-
+#### 3. Convolutional Neural Network with Multi-head Attention layer
 
